@@ -36,14 +36,14 @@ function rot13(encodedStr) {
   // Only change code below this line
 	let str = encodedStr.split(" ");
 
-	decodedArr  = str.map(function (letter) {
-		if(lookup[letter] != "?" && lookup[letter] != ",")
-		{
-			return lookup[letter]
-		}
-		return letter;
+	str.forEach((val)=>{
+		let ans = "";
+		for(let i = 0 ; i < val.length ; i++)
+			{
+				ans += lookup[val[i]];
+			}
+		decodedArr.push(ans);
 	})
-	
   return decodedArr.join(""); //return decodedArr
 }
 
