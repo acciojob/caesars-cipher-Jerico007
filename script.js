@@ -34,7 +34,7 @@ const lookup = {
 function rot13(encodedStr) {
   let decodedArr = []; // Your Result goes here
   // Only change code below this line
-	let str = encodedStr.split("")
+	let str = encodedStr.split(" ");
 
 	decodedArr  = str.map(function (letter) {
 		if(lookup[letter] != "?" && lookup[letter] != ",")
