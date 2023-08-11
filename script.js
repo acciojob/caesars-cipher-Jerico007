@@ -37,7 +37,7 @@ function rot13(encodedStr) {
 	let str = encodedStr.split("")
 
 	decodedArr  = str.map(function (letter) {
-		if(lookup.hasOwnProperty(letter))
+		if(lookup[letter] != "?" && lookup[letter] != ",")
 		{
 			return lookup[letter]
 		}
